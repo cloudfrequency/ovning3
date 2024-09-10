@@ -45,6 +45,7 @@ def main():
         except ValueError:
             print("Program argument isn't a number!")
     else:
+	print("Pascal's triangle")
         pascal_triangle(6)
 
 
