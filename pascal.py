@@ -39,7 +39,11 @@ def _pascal_helper(current: int, max: int, row: list[int], max_value_size: int) 
 def main():
     if len(argv) == 2:
         try:
-            pascal_triangle(int(argv[1]))
+	    n = int(argv[1])
+	    if n < 1 or n > 1023:
+            	print("Error: The number must be between 1 and 1023.")
+	    else:
+            pascal_triangle(n)
         except ValueError:
             print("Program argument isn't a number!")
     else:
